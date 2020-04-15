@@ -9,21 +9,33 @@ Las colecciones en java se definen como interfaces que nos brindan la capacidad 
 
 		-Set: Es una interfaz que define una colección que no admite elementos duplicados. Al heredar de collections, tiene los métodos de este añadiendo únicamente la función de descartar los elementos duplicados, para lo cual comprueba todos los elementos sin tener en cuenta el orden que ocupen los elementos.
 			-HashSet: Esta implementación de Set utiliza una tabla Hash para almacenar los elementos. Es la implementación que más rendimiento tiene entre las derivadas del Set, pero no establece ningún orden en los diferentes elementos de la tabla. Por este motivo es una de las más usadas cuando no es necesario tener en cuenta el orden de los elementos.
+			
 			-LinkedHasSet: Esta implementación es básicamente un HashSet ampliado para que se tenga en cuenta el orden de inserción de los elementos. Por ello es un poco menor en rendimiento que su predecesora, aunque sigue superando a la implementación TreeSet.
+			
 			-TreeSet: Esta es la implementación de Set con el menor rendimiento, pues, debido a su estructura de árbol, utiliza log(N) para sus operaciones básicas.
 
+		
 		-List: La interfaz List se define como una sucesión de elementos. Una de las principales diferencias con la interfaz Set es que List si permite el uso de elementos duplicados y, por norma general, tanto esta como sus implementaciones son las más habituales de encontrar. Como en Set, hereda de collections, por lo que tiene todas sus funciones así como añadir las suyas propias las cuales son el acceso posicional a los elementos, la búsqueda de elementos concretos, una mejora en Iterator y permite el uso de ciertas operaciones extra.
+			
 			-Vector: Es una implementación de List que esta presente desde la primera versión de java. Por tanto, está muy desfasado (legacy), no tiene un rendimiento muy bueno y por tanto no es muy recomendable usarlo en la actualidad
+			
 			-ArrayList: Es la implementación más usada en Java. Esta basada en un array redimensionable que va creciendo (o decreciendo) en función de los elementos que añadamos (o borremos). En la mayoría de situaciones es la que presenta el mejor rendimiento.
+			
 			-LinkedList: Esta implementación se utiliza para aumentar el rendimiento en casos muy concretos. Se trata de una lista que esta doblemente enlazada entre elementos, teniendo cada uno un puntero al anterior y al siguiente elemento.
 
 			-Otras implementaciones de List:
+				
 				-Queue: Como indica su nombre, se trata de una fila de elementos que van desplazándose a medida que el primer elemento va cambiando, es decir, todos los elementos añadidos se insertan al final de la cola y avanzan cuando el primer elemento se mueve o elimina.
+				
 				-Deque: Es una queue doble que puede funcionar en ambos sentidos.
+				
 
 		-Map: Esta interfaz tiene la peculiaridad de que no hereda de collections, por tanto solo tiene los métodos que la misma incluye. Esta interfaz asocia a cada valor una clave, no puede contener elementos (claves) duplicados y cada clave solo puede tener asociado un elemento. Las implementaciones que incluye son bastante parecidas a las de la interfaz Set.
+			
 			-HashMap: Esta implementación de Map almacena las claves en una tabla Hash. Al igual que en HashSet, es la implementación con el mejor rendimiento de entre las 3 principales, a costa de no garantizar un orden fijo en la tabla Hash.
+			
 			-LinkedHashMap: Al igual que el LinkedHashSet, es una ampliación con menor rendimiento que HashMap, pues permite definir un orden a la tabla Hash de las claves.
+			
 			-TreeMap: De nuevo como el TreeSet, es la implementación de menor rendimiento pues almacena las claves en función de sus valores usando log(N) en sus operaciones más básicas.
 
 También existen colecciones especiales que se utilizan en casos muy específicos:
