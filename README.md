@@ -4,7 +4,9 @@
 
 1.- DEFINICIÓN DE COLECCIONES
 Las colecciones en java se definen como interfaces que nos brindan la capacidad de almacenar elementos y, mediante el uso de diferentes métodos, hacer muchas operaciones diferentes con ellos (añadir, borrar o modificar elementos, saber el número de los mismos, etc). En java disponemos de una gran variedad de tipos de colecciones, las cuales han ido siendo añadidas con la mayoría de actualizaciones de este lenguaje. Las más importantes serán explicadas a continuación:
-2.- TIPOS E IMPLEMENTACIONES DE COLECCIONES
+
+## 2.- TIPOS E IMPLEMENTACIONES DE COLECCIONES
+
 		-Set: Es una interfaz que define una colección que no admite elementos duplicados. Al heredar de collections, tiene los métodos de este añadiendo únicamente la función de descartar los elementos duplicados, para lo cual comprueba todos los elementos sin tener en cuenta el orden que ocupen los elementos.
 			-HashSet: Esta implementación de Set utiliza una tabla Hash para almacenar los elementos. Es la implementación que más rendimiento tiene entre las derivadas del Set, pero no establece ningún orden en los diferentes elementos de la tabla. Por este motivo es una de las más usadas cuando no es necesario tener en cuenta el orden de los elementos.
 			-LinkedHasSet: Esta implementación es básicamente un HashSet ampliado para que se tenga en cuenta el orden de inserción de los elementos. Por ello es un poco menor en rendimiento que su predecesora, aunque sigue superando a la implementación TreeSet.
