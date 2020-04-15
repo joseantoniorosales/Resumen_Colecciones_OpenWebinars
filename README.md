@@ -39,26 +39,39 @@ Las colecciones en java se definen como interfaces que nos brindan la capacidad 
 			-TreeMap: De nuevo como el TreeSet, es la implementación de menor rendimiento pues almacena las claves en función de sus valores usando log(N) en sus operaciones más básicas.
 
 También existen colecciones especiales que se utilizan en casos muy específicos:
+		
 		-Colecciones no modificables: Son colecciones que si se intentan modificar el programa lanzará un error (UnsupportedOperationException) y se pueden utilizar por ejemplo para el resultado de una operación (es decir, un resultado fijo).
 		-Colecciones sincronizadas: Se utilizan para trabajar de forma pareja con otros hilos en curso del programa.
 
 A su vez, también existen diferentes implementaciones menos usadas que pueden ser muy útiles en determinadas situaciones:
-			-EnumSet: Se trata de un set ideado para contener valores de enumeración.
-			-CopyOnWriteArraySet/List: Este Set/List nos permite crear una colección thread-safe, pero sin estar sincronizada.
+				
+				-EnumSet: Se trata de un set ideado para contener valores de enumeración.
+				
+				-CopyOnWriteArraySet/List: Este Set/List nos permite crear una colección thread-safe, pero sin estar sincronizada.
+			
 			-EnumMap: Es un Map de alto rendimiento cuyas claves son valores de enumeración.
+			
 			-WeakHashMap: Es un HashMap que permite referencias débiles a sus claves. Por tanto, si una clave no se va a utilizar más, el recolector de basura se encarga de borrar el par
+			
 			-IdentityHashMap: Es un HashMap cuyo uso no es común que cambia la comparación de claves con equals (=) a ==.
 
-3.- ALGORITMOS UTILIZADOS EN COLECCIONES
+## 3.- ALGORITMOS UTILIZADOS EN COLECCIONES
+	
 	Son las operaciones que se pueden realizar con las colecciones y vienen incluidas en la clase Collections (diferente de Collection). Aunque existen muchas, solo veremos las más importantes:
+	
 
-4.- ALGORITMOS MÁS UTILIZADOS
+## 4.- ALGORITMOS MÁS UTILIZADOS
+	
 	Algoritmos de ordenación:
+		
 		-Collections.sort(list): Esta operación tiene que recibir una colección del tipo List. La colección que recibe queda modificada por dicha operación.
+		
 		-Collections.sort(list, comparator): Esta operación ordena la lista que recibe en el orden del comparator.
 
 	Algoritmos de búsqueda:
+		
 		-Collections.binarySearch(): Esta operación devolverá el elemento que este en la posición especificada, siempre y cuando la lista este ordenada en el orden natural (ascendente).
 		
-	También existen otras operaciones como hallar el máximo, el mínimo, la frecuencia, disjoint, etc.
+	También existen otras operaciones como hallar el máximo, el mínimo, la frecuencia, disjoint, etc.	
+	
 	También existen librerías de terceros (librerías creadas por empresas/personas que no trabajan directamente para Java) que pueden ser muy útiles en según que casos. Las más utilizadas son las de Google (Guava), las de Eclipse y las de Apache.
